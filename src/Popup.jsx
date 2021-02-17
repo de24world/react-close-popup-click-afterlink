@@ -13,7 +13,11 @@ const Popup = (props) => {
 
   const onAcceptAllButtonClick = () => {
     console.log("accept all");
-    props.ucData.onAcceptAllHandler();
+  };
+
+  const AcceptClose = () => {
+    onAcceptAllButtonClick();
+    closePopup();
   };
 
   return (
@@ -37,7 +41,7 @@ const Popup = (props) => {
               .
             </p>
             <div className="btn-list">
-              <button className="accept-btn" onClick={onAcceptAllButtonClick}>
+              <button className="accept-btn" onClick={AcceptClose}>
                 Akzeptiern
               </button>
               <p className="option-btn">Einstellung</p>
